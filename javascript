@@ -11,32 +11,32 @@ console.log(mapas)
 
 2 for
 
-var inp = [2,3,8,1,4,5,9,7,6];
+var input = [2,3,8,1,4,5,9,7,6];
 
-var o = [];
-var done;
+var output = [];
+var inserted;
 
-for (var i = 0, ii = inp.length ; i < ii ; i++){
-  done = false;
-  for (var j = 0, jj = o.length ; j < jj ; j++){
-    if (inp[i] < o[j]){
-      done = true;
-      o.splice(j, 0, inp[i]);
+for (var i = 0, ii = input.length ; i < ii ; i++){
+  inserted = false;
+  for (var j = 0, jj = output.length ; j < jj ; j++){
+    if (input[i] < output[j]){
+      inserted = true;
+      output.splice(j, 0, input[i]);
       break;
     }
   }
   
-  if (!done)
-    o.push(i[i])
+  if (!inserted)
+    output.push(input[i])
 }
 
-console.log(o);
+console.log(output);
 
 3 foreach
 
 ab = [];
 ab[0] = 100;
-a[b5] = 50;
+ab[5] = 50;
 ab[3] = 500;
 ab[4] = 300;
 ab.sort( function( a, b ) { return a - b });
