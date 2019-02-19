@@ -11,27 +11,29 @@ console.log(mapas)
 
 2 for
 
-var input = [2,3,8,1,4,5,9,7,6];
+var arr1=[5,8,3,6,2,1,0];
 
-var output = [];
-var inserted;
-
-for (var i = 0, ii = input.length ; i < ii ; i++){
-  inserted = false;
-  for (var j = 0, jj = output.length ; j < jj ; j++){
-    if (input[i] < output[j]){
-      inserted = true;
-      output.splice(j, 0, input[i]);
-      break;
+var tmp;
+for(var i=0;i<arr1.length;i++)
+{
+    for(var j=i+1;j<arr1.length;j++)
+    {
+        if(arr1[i] > arr1[j])
+        {
+            tmp=arr1[i];
+            arr1[i]=arr1[j];
+            arr1[j]=tmp;
+        }
     }
-  }
-  
-  if (!inserted)
-    output.push(input[i])
+}
+for(var i=0;i<arr1.length;i++)
+{
+    console.log(arr1[i])
 }
 
-console.log(output);
-
+arr1.forEach(function(){
+    console.log("print"+arr1);
+});
 3 foreach
 
 ab = [];
